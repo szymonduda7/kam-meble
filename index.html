@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAM Meble Kamil Kucharski | Meble na wymiar, Łęg k. Kruszyny</title>
+<meta name="description" content="KAM Meble Kamil Kucharski, producent mebli na wymiar z województwa śląskiego. Kuchnie, szafy, garderoby, zabudowy przedpokoju, meble łazienkowe i pokojowe. Pomiar, projekt z wizualizacją, montaż. Łęg 27, 42-282 Kruszyna. Tel. 509 543 139.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.js"></script>
+<link rel="stylesheet" href="styles.css">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          plyta: '#f0f0f2',
+          front: '#ffffff',
+          ink: '#1b1b1d',
+          'ink-raised': '#27272b',
+          'ink-soft': '#55565c',
+          magenta: '#d7127e',
+          'magenta-dark': '#b00d66',
+          'magenta-light': '#f3609f',
+        },
+        fontFamily: {
+          sans: ['"Instrument Sans"', 'sans-serif'],
+          display: ['"Familjen Grotesk"', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+</head>
+<body class="bg-plyta text-ink">
+
+<!-- ============ HEADER ============ -->
+<header id="site-header" class="site-header fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 md:h-20 flex items-center justify-between gap-4">
+    <a href="index.html" class="brand-link focus-ring rounded-md flex items-center" aria-label="KAM Meble, strona główna">
+      <img src="images/logo.webp" alt="KAM Meble" width="256" height="256" class="brand-logo w-14 h-14 md:w-[4.5rem] md:h-[4.5rem]">
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-[0.95rem] font-medium" aria-label="Główna nawigacja">
+      <a href="uslugi.html" class="nav-link focus-ring">Usługi</a>
+      <a href="#realizacje" class="nav-link focus-ring">Realizacje</a>
+      <a href="galeria.html" class="nav-link focus-ring">Galeria</a>
+      <a href="#opinie" class="nav-link focus-ring">Opinie</a>
+      <a href="#kontakt" class="nav-link focus-ring">Kontakt</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <a href="tel:509543139" class="btn btn-dark px-5 py-2.5 text-sm">
+        <i data-lucide="phone" class="w-4 h-4"></i>
+        <span class="hidden sm:inline">509 543 139</span><span class="sm:hidden">Zadzwoń</span>
+      </a>
+      <button id="menu-toggle" class="md:hidden btn btn-outline w-11 h-11 !p-0" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-menu" class="mobile-menu md:hidden absolute left-0 right-0 top-full bg-front border-b border-black/10 px-5 py-4" aria-label="Menu mobilne">
+    <ul class="flex flex-col text-lg font-semibold">
+      <li><a href="uslugi.html" class="block py-3 border-b border-black/5">Usługi</a></li>
+      <li><a href="#realizacje" class="block py-3 border-b border-black/5">Realizacje</a></li>
+      <li><a href="galeria.html" class="block py-3 border-b border-black/5">Galeria</a></li>
+      <li><a href="#opinie" class="block py-3 border-b border-black/5">Opinie</a></li>
+      <li><a href="#kontakt" class="block py-3">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="relative overflow-hidden pt-28 md:pt-36 pb-20 md:pb-28 px-5 md:px-8">
+  <div class="grain"></div>
+  <div class="relative max-w-7xl mx-auto grid lg:grid-cols-[1fr_1.05fr] gap-14 lg:gap-20 items-center">
+    <div>
+      <h1 class="heading-xl">Meble na wymiar, spasowane <span class="mark">co do milimetra</span></h1>
+      <p class="lead mt-6 max-w-xl">Kuchnie, szafy, garderoby i&nbsp;zabudowy z&nbsp;pracowni w&nbsp;Łęgu koło Kruszyny. Pomiar, projekt z&nbsp;wizualizacją, produkcję i&nbsp;montaż robi u&nbsp;nas jedna ekipa.</p>
+      <div class="mt-9 flex flex-wrap gap-3">
+        <a href="tel:509543139" class="btn btn-magenta px-6 py-4 text-base">
+          <i data-lucide="phone" class="w-5 h-5"></i> Zadzwoń: 509 543 139
+        </a>
+        <a href="#wycena" class="btn btn-outline px-6 py-4 text-base">Zapytaj o wycenę</a>
+      </div>
+      <ul class="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-[0.95rem] text-ink-soft">
+        <li class="flex items-center gap-2"><i data-lucide="star" class="w-4 h-4 text-magenta fill-current"></i><strong class="text-ink">5,0</strong> na Oferteo (114 opinii)</li>
+        <li class="flex items-center gap-2"><i data-lucide="star" class="w-4 h-4 text-magenta fill-current"></i><strong class="text-ink">5,0</strong> w Google</li>
+        <li class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4 text-magenta-dark"></i>Pn–Pt 7:00–17:00</li>
+      </ul>
+    </div>
+
+    <div class="collage-wrap">
+      <svg class="hex-frame" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <polyline class="hx-ink" points="100,24 100,76 50,100" fill="none" stroke-width="2" vector-effect="non-scaling-stroke"/>
+        <polyline class="hx-ink" points="0,76 0,24 50,0" fill="none" stroke-width="2" vector-effect="non-scaling-stroke"/>
+        <line class="hx-mag" x1="50" y1="0" x2="100" y2="24" stroke-width="4" vector-effect="non-scaling-stroke"/>
+        <line class="hx-mag" x1="50" y1="100" x2="0" y2="76" stroke-width="4" vector-effect="non-scaling-stroke"/>
+      </svg>
+      <div class="collage">
+        <div class="photo collage-main">
+          <img src="images/10.webp" alt="Kuchnia z wyspą w dekorze dębu i czarną zabudową wysoką" width="1200" height="1600">
+        </div>
+        <div class="photo">
+          <img src="images/70.webp" alt="Czarna kuchnia z wyspą w ciemnym kamieniu">
+        </div>
+        <div class="photo">
+          <img src="images/47.webp" alt="Szafa przesuwna z lustrami w czarnej ramie w stylu loft" style="object-position:50% 40%">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ USŁUGI ============ -->
+<section id="uslugi" class="relative py-20 md:py-28 px-5 md:px-8 bg-front border-y border-black/5">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 reveal">
+      <div class="max-w-2xl">
+        <h2 class="heading-lg">Co dla Ciebie zrobimy</h2>
+        <p class="lead mt-4">Wszystko na wymiar i&nbsp;pod konkretne wnętrze: od kuchni i&nbsp;łazienki, przez szafy i&nbsp;garderoby, po meble do pokoju i&nbsp;biura.</p>
+      </div>
+      <a href="uslugi.html" class="text-link shrink-0">Wszystkie usługi <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+      <a href="uslugi.html#kuchnie" class="surface card-link p-6 md:p-7 flex flex-col reveal">
+        <span class="icon-chip"><i data-lucide="cooking-pot" class="w-5 h-5"></i></span>
+        <h3 class="heading-md mt-5">Meble kuchenne</h3>
+        <p class="mt-2 text-ink-soft">Kuchnie z&nbsp;wyspą, półwyspem lub barkiem, zabudowa AGD w&nbsp;słupkach, cargo i&nbsp;szuflady Blum z&nbsp;cichym domykiem.</p>
+        <span class="text-link mt-auto pt-5">Zobacz więcej <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+      </a>
+      <a href="uslugi.html#szafy" class="surface card-link p-6 md:p-7 flex flex-col reveal">
+        <span class="icon-chip"><i data-lucide="door-closed" class="w-5 h-5"></i></span>
+        <h3 class="heading-md mt-5">Szafy wnękowe i&nbsp;przesuwne</h3>
+        <p class="mt-2 text-ink-soft">Szafy od podłogi do sufitu, pod skosem i&nbsp;we wnęce. Drzwi z&nbsp;lustrem, w&nbsp;dekorze drewna albo w&nbsp;czarnej ramie.</p>
+        <span class="text-link mt-auto pt-5">Zobacz więcej <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+      </a>
+      <a href="uslugi.html#garderoby" class="surface card-link p-6 md:p-7 flex flex-col reveal">
+        <span class="icon-chip"><i data-lucide="shirt" class="w-5 h-5"></i></span>
+        <h3 class="heading-md mt-5">Garderoby i&nbsp;przedpokoje</h3>
+        <p class="mt-2 text-ink-soft">Zabudowy z&nbsp;siedziskiem, wieszakami i&nbsp;tapicerowanym panelem. W&nbsp;środku szuflady na buty, półki i&nbsp;drążki.</p>
+        <span class="text-link mt-auto pt-5">Zobacz więcej <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+      </a>
+      <a href="uslugi.html#lazienki" class="surface card-link p-6 md:p-7 flex flex-col reveal">
+        <span class="icon-chip"><i data-lucide="bath" class="w-5 h-5"></i></span>
+        <h3 class="heading-md mt-5">Łazienki i&nbsp;pralnie</h3>
+        <p class="mt-2 text-ink-soft">Szafki pod umywalki, słupki, zabudowa pralki z&nbsp;suszarką i&nbsp;wysuwane kosze na pranie.</p>
+        <span class="text-link mt-auto pt-5">Zobacz więcej <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+      </a>
+      <a href="uslugi.html#pokojowe" class="surface card-link p-6 md:p-7 flex flex-col reveal">
+        <span class="icon-chip"><i data-lucide="sofa" class="w-5 h-5"></i></span>
+        <h3 class="heading-md mt-5">Meble pokojowe</h3>
+        <p class="mt-2 text-ink-soft">Szafki RTV, witryny z&nbsp;podświetleniem, komody i&nbsp;zabudowy całych ścian w&nbsp;salonie czy sypialni.</p>
+        <span class="text-link mt-auto pt-5">Zobacz więcej <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+      </a>
+      <a href="uslugi.html#biurowe" class="surface card-link p-6 md:p-7 flex flex-col reveal">
+        <span class="icon-chip"><i data-lucide="briefcase" class="w-5 h-5"></i></span>
+        <h3 class="heading-md mt-5">Zabudowy biurowe</h3>
+        <p class="mt-2 text-ink-soft">Biurka, regały i&nbsp;szafy do domowego gabinetu albo firmowego biura, dopasowane do sposobu pracy.</p>
+        <span class="text-link mt-auto pt-5">Zobacz więcej <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DLACZEGO MY ============ -->
+<section class="relative py-20 md:py-28 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center">
+    <div class="photo aspect-[4/5] lg:aspect-[4/4.6] reveal">
+      <img src="images/119.webp" alt="Kuchnia z półwyspem w dekorze dębu i podświetlaną witryną" loading="lazy">
+    </div>
+    <div>
+      <h2 class="heading-lg reveal">Za co klienci nas polecają</h2>
+      <p class="lead mt-4 reveal">Mamy 114 opinii na Oferteo i&nbsp;każda to piątka. Te cztery rzeczy wracają w&nbsp;nich najczęściej.</p>
+      <div class="mt-10 grid sm:grid-cols-2 gap-x-8 gap-y-9">
+        <div class="reveal">
+          <i data-lucide="ruler" class="w-6 h-6 text-magenta-dark"></i>
+          <h3 class="font-display font-bold text-xl mt-3 tracking-tight">Dokładnie</h3>
+          <p class="mt-2 text-ink-soft">„Wszystko jest idealnie równe, spasowane co do milimetra, a&nbsp;wykończenie jest po prostu piękne.”</p>
+        </div>
+        <div class="reveal">
+          <i data-lucide="box" class="w-6 h-6 text-magenta-dark"></i>
+          <h3 class="font-display font-bold text-xl mt-3 tracking-tight">Z&nbsp;wizualizacją</h3>
+          <p class="mt-2 text-ink-soft">„Nasza kuchnia oraz garderoba na żywo wyglądają jeszcze lepiej niż na wizualizacji.”</p>
+        </div>
+        <div class="reveal">
+          <i data-lucide="calendar-check" class="w-6 h-6 text-magenta-dark"></i>
+          <h3 class="font-display font-bold text-xl mt-3 tracking-tight">W&nbsp;terminie</h3>
+          <p class="mt-2 text-ink-soft">„Montaż zrealizowany nawet przed planowanym terminem.”</p>
+        </div>
+        <div class="reveal">
+          <i data-lucide="sparkles" class="w-6 h-6 text-magenta-dark"></i>
+          <h3 class="font-display font-bold text-xl mt-3 tracking-tight">Czysto po montażu</h3>
+          <p class="mt-2 text-ink-soft">„Fachowcy pozostawili po sobie porządek i&nbsp;wszystko czyste na błysk.”</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ POMIAR I WYCENA ============ -->
+<section id="wycena" class="relative bg-ink text-front on-dark overflow-hidden">
+  <div class="grain"></div>
+  <div class="accent-bar w-full" aria-hidden="true"></div>
+  <div class="relative max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-24 grid lg:grid-cols-[1.2fr_1fr] gap-10 items-center">
+    <div class="reveal">
+      <h2 class="heading-lg">Zaczynamy od pomiaru <span class="text-magenta-light">u&nbsp;Ciebie w&nbsp;domu.</span></h2>
+      <p class="lead mt-5 max-w-2xl">Przyjeżdżamy, mierzymy, doradzamy układ i&nbsp;materiały. Potem dostajesz projekt z&nbsp;wizualizacją, żeby zobaczyć meble jeszcze przed produkcją. Masz własny projekt albo zdjęcie inspiracji? Wyślij je mailem.</p>
+    </div>
+    <div class="flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end reveal">
+      <a href="tel:509543139" class="btn btn-magenta px-7 py-4 text-base"><i data-lucide="phone" class="w-5 h-5"></i> 509 543 139</a>
+      <a href="mailto:kammeblekamilkucharski@gmail.com?subject=Wycena%20mebli" class="btn btn-outline px-7 py-4 text-base"><i data-lucide="mail" class="w-5 h-5"></i> Wyślij projekt mailem</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REALIZACJE ============ -->
+<section id="realizacje" class="py-20 md:py-28 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 reveal">
+      <div class="max-w-2xl">
+        <h2 class="heading-lg">Realizacje</h2>
+        <p class="lead mt-4">Kuchnie, szafy i&nbsp;zabudowy zamontowane u&nbsp;naszych klientów. Kliknij zdjęcie, żeby je powiększyć.</p>
+      </div>
+      <a href="galeria.html" class="text-link shrink-0">Cała galeria, 123 zdjęcia <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+    </div>
+
+    <div class="gallery">
+      <button type="button" class="gallery-item" data-full="images/10.webp" data-caption="Kuchnia z wyspą w dębie i czarną zabudową wysoką" aria-label="Powiększ: Kuchnia z wyspą w dębie i czarną zabudową wysoką"><img src="images/10.webp" alt="Kuchnia z wyspą w dębie i czarną zabudową wysoką" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-full="images/70.webp" data-caption="Czarna kuchnia z wyspą w kamieniu" aria-label="Powiększ: Czarna kuchnia z wyspą w kamieniu"><img src="images/70.webp" alt="Czarna kuchnia z wyspą w kamieniu" width="1600" height="1200" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-full="images/47.webp" data-caption="Szafa przesuwna z lustrami w czarnej ramie w stylu loft" aria-label="Powiększ: Szafa przesuwna z lustrami w czarnej ramie w stylu loft"><img src="images/47.webp" alt="Szafa przesuwna z lustrami w czarnej ramie w stylu loft" width="1600" height="1200" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-full="images/20.webp" data-caption="Kuchnia w dekorze dębu z czarną lodówką side by side" aria-label="Powiększ: Kuchnia w dekorze dębu z czarną lodówką side by side"><img src="images/20.webp" alt="Kuchnia w dekorze dębu z czarną lodówką side by side" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-full="images/43.webp" data-caption="Zabudowa przedpokoju z szafą przesuwną i siedziskiem" aria-label="Powiększ: Zabudowa przedpokoju z szafą przesuwną i siedziskiem"><img src="images/43.webp" alt="Zabudowa przedpokoju z szafą przesuwną i siedziskiem" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-full="images/34.webp" data-caption="Szafka pod dwie umywalki z frezowanymi frontami" aria-label="Powiększ: Szafka pod dwie umywalki z frezowanymi frontami"><img src="images/34.webp" alt="Szafka pod dwie umywalki z frezowanymi frontami" width="1600" height="1200" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-full="images/119.webp" data-caption="Kuchnia z półwyspem w dębie i podświetlaną witryną" aria-label="Powiększ: Kuchnia z półwyspem w dębie i podświetlaną witryną"><img src="images/119.webp" alt="Kuchnia z półwyspem w dębie i podświetlaną witryną" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-full="images/22.webp" data-caption="Grafitowa kuchnia z blatem w kamieniu" aria-label="Powiększ: Grafitowa kuchnia z blatem w kamieniu"><img src="images/22.webp" alt="Grafitowa kuchnia z blatem w kamieniu" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-full="images/51.webp" data-caption="Szafa przesuwna w dębie z czarną ramą i lustrem" aria-label="Powiększ: Szafa przesuwna w dębie z czarną ramą i lustrem"><img src="images/51.webp" alt="Szafa przesuwna w dębie z czarną ramą i lustrem" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-full="images/32.webp" data-caption="Szafka RTV z lamelami w dębie na ścianie" aria-label="Powiększ: Szafka RTV z lamelami w dębie na ścianie"><img src="images/32.webp" alt="Szafka RTV z lamelami w dębie na ścianie" width="1600" height="1200" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-full="images/4.webp" data-caption="Kuchnia w literę L w bieli i dębie z czarną lodówką" aria-label="Powiększ: Kuchnia w literę L w bieli i dębie z czarną lodówką"><img src="images/4.webp" alt="Kuchnia w literę L w bieli i dębie z czarną lodówką" width="1600" height="1197" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-full="images/84.webp" data-caption="Wnęka z siedziskiem i wieszakami w zabudowie przedpokoju" aria-label="Powiększ: Wnęka z siedziskiem i wieszakami w zabudowie przedpokoju"><img src="images/84.webp" alt="Wnęka z siedziskiem i wieszakami w zabudowie przedpokoju" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item is-hidden" data-full="images/72.webp" data-caption="Czarne fronty i podświetlony blat" aria-label="Powiększ: Czarne fronty i podświetlony blat"><img src="images/72.webp" alt="Czarne fronty i podświetlony blat" width="1600" height="1200" loading="lazy"></button>
+      <button type="button" class="gallery-item is-hidden" data-full="images/37.webp" data-caption="Zabudowa pralki i suszarki w czarnej łazience" aria-label="Powiększ: Zabudowa pralki i suszarki w czarnej łazience"><img src="images/37.webp" alt="Zabudowa pralki i suszarki w czarnej łazience" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item is-hidden" data-full="images/40.webp" data-caption="Podświetlana witryna i komoda pod skosem" aria-label="Powiększ: Podświetlana witryna i komoda pod skosem"><img src="images/40.webp" alt="Podświetlana witryna i komoda pod skosem" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item is-hidden" data-full="images/114.webp" data-caption="Kuchnia w dębie i bieli w literę U" aria-label="Powiększ: Kuchnia w dębie i bieli w literę U"><img src="images/114.webp" alt="Kuchnia w dębie i bieli w literę U" width="1600" height="720" loading="lazy"></button>
+      <button type="button" class="gallery-item is-hidden" data-full="images/21.webp" data-caption="Kuchnia z barkiem w dębie i winiarką" aria-label="Powiększ: Kuchnia z barkiem w dębie i winiarką"><img src="images/21.webp" alt="Kuchnia z barkiem w dębie i winiarką" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item is-hidden" data-full="images/59.webp" data-caption="Szuflady wewnętrzne na buty" aria-label="Powiększ: Szuflady wewnętrzne na buty"><img src="images/59.webp" alt="Szuflady wewnętrzne na buty" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item is-hidden" data-full="images/102.webp" data-caption="Biała zabudowa z półkami i szufladami" aria-label="Powiększ: Biała zabudowa z półkami i szufladami"><img src="images/102.webp" alt="Biała zabudowa z półkami i szufladami" width="1600" height="720" loading="lazy"></button>
+      <button type="button" class="gallery-item is-hidden" data-full="images/1.webp" data-caption="Szuflady Blum z frontami w dekorze orzecha" aria-label="Powiększ: Szuflady Blum z frontami w dekorze orzecha"><img src="images/1.webp" alt="Szuflady Blum z frontami w dekorze orzecha" width="1198" height="1600" loading="lazy"></button>
+    </div>
+    <div class="mt-10 flex flex-wrap justify-center gap-3">
+      <button id="gallery-more" class="btn btn-outline px-7 py-3.5">Pokaż więcej zdjęć <i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+      <a href="galeria.html" class="btn btn-dark px-7 py-3.5">Zobacz całą galerię <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPINIE ============ -->
+<section id="opinie" class="relative bg-ink text-front on-dark py-20 md:py-28 px-5 md:px-8 overflow-hidden">
+  <div class="grain"></div>
+  <div class="relative max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-[1fr_auto] gap-8 items-end mb-12 reveal">
+      <div class="max-w-2xl">
+        <h2 class="heading-lg">Co mówią klienci</h2>
+        <p class="lead mt-4">Wybrane opinie z&nbsp;Oferteo i&nbsp;Google. Na Oferteo jesteśmy od 4 lat.</p>
+      </div>
+      <div class="flex items-center gap-5">
+        <span class="font-display font-bold text-6xl md:text-7xl tracking-tight leading-none">5,0</span>
+        <div>
+          <div class="flex gap-0.5 text-magenta-light" aria-label="5 na 5 gwiazdek">
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i>
+          </div>
+          <p class="text-sm text-[#b8b8be] mt-1">114 opinii na Oferteo, 7 w Google</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews" id="reviews-track">
+      <blockquote class="review reveal">
+        <p>„Kuchnia jest dopracowana w&nbsp;najmniejszym szczególe i&nbsp;wykonana z&nbsp;najwyższą starannością. Już od pierwszego spotkania Pan Kamil wykazał się ogromnym profesjonalizmem, cierpliwie tłumaczył różnice w&nbsp;materiałach i&nbsp;doradzał rozwiązania, dzięki którym każdy centymetr przestrzeni został wykorzystany. Ogromnym ułatwieniem była wizualizacja.”</p>
+        <footer class="mt-4 flex items-center justify-between gap-3"><span class="text-sm text-magenta-light font-semibold">W.G.</span><span class="review-source">Oferteo, Google</span></footer>
+      </blockquote>
+      <blockquote class="review reveal">
+        <p>„U&nbsp;Pana Kamila zamówiłam dwie szafy i&nbsp;jestem naprawdę bardzo zadowolona z&nbsp;efektu. Montaż przebiegł sprawnie i&nbsp;bez żadnych problemów, mimo że wszystkie materiały trzeba było wnieść na 4.&nbsp;piętro.”</p>
+        <footer class="mt-4 flex items-center justify-between gap-3"><span class="text-sm text-magenta-light font-semibold">M.</span><span class="review-source">Oferteo</span></footer>
+      </blockquote>
+      <blockquote class="review reveal">
+        <p>„Mistrz w&nbsp;swoim fachu! Szybko przyjął zlecenie, wykonał pomiary i&nbsp;projekt. Był zawsze w&nbsp;kontakcie. Ekipa szybko i&nbsp;sprawnie zamontowała wszystko na swoim miejscu i&nbsp;posprzątała po sobie.”</p>
+        <footer class="mt-4 flex items-center justify-between gap-3"><span class="text-sm text-magenta-light font-semibold">Tamara</span><span class="review-source">Google</span></footer>
+      </blockquote>
+      <blockquote class="review reveal">
+        <p>„Meble wykonane solidnie i&nbsp;starannie, w&nbsp;momencie dostawy zabezpieczone folią ochronną. Wcześniej wymierzone i&nbsp;pasowały bez poprawek. Montaż zrealizowany nawet przed planowanym terminem.”</p>
+        <footer class="mt-4 flex items-center justify-between gap-3"><span class="text-sm text-magenta-light font-semibold">I.T.</span><span class="review-source">Oferteo</span></footer>
+      </blockquote>
+      <blockquote class="review reveal">
+        <p>„Pomiar był wykonany z&nbsp;wielką dokładnością, a&nbsp;doradztwo w&nbsp;kwestii materiałów i&nbsp;projektu było rzeczowe i&nbsp;pomocne. Wszystko jest idealnie równe, spasowane co do milimetra. Meble nie tylko świetnie wyglądają, ale są też solidne i&nbsp;funkcjonalne.”</p>
+        <footer class="mt-4 flex items-center justify-between gap-3"><span class="text-sm text-magenta-light font-semibold">S.S.</span><span class="review-source">Oferteo, Google</span></footer>
+      </blockquote>
+      <blockquote class="review reveal">
+        <p>„Rzetelnie, terminowo, schludnie, posprzątane po swojej pracy. Żadnych uwag, jak ustalone, tak zrobione. Godny polecenia.”</p>
+        <footer class="mt-4 flex items-center justify-between gap-3"><span class="text-sm text-magenta-light font-semibold">Łukasz K.</span><span class="review-source">Google</span></footer>
+      </blockquote>
+      <blockquote class="review reveal">
+        <p>„Sąsiedzi dziwili się, że zamontowanie dużej garderoby i&nbsp;drzwi przesuwnych do dwóch wnęk trwało tak krótko; wzięli wizytówki od Pana Kamila.”</p>
+        <footer class="mt-4 flex items-center justify-between gap-3"><span class="text-sm text-magenta-light font-semibold">B.</span><span class="review-source">Oferteo</span></footer>
+      </blockquote>
+      <blockquote class="review reveal">
+        <p>„Pan Kamil zasugerował nawet, gdzie powinny znajdować się kontakty, aby jak najbardziej ułatwić korzystanie z&nbsp;kuchni. Meble w&nbsp;100% zgodne z&nbsp;moimi oczekiwaniami (systemy Blum i&nbsp;cichy domyk, kolorystyka frontów). Pomiar wykonany na miejscu razem z&nbsp;wyceną.”</p>
+        <footer class="mt-4 flex items-center justify-between gap-3"><span class="text-sm text-magenta-light font-semibold">S.R.</span><span class="review-source">Oferteo</span></footer>
+      </blockquote>
+      <blockquote class="review reveal">
+        <p>„Pełen profesjonalizm od samego początku planowania i&nbsp;projektu, aż po sam montaż. Świetne i&nbsp;praktyczne pomysły. Wszystko dopracowane w&nbsp;najdrobniejszych szczegółach. Bardzo solidne wykonanie.”</p>
+        <footer class="mt-4 flex items-center justify-between gap-3"><span class="text-sm text-magenta-light font-semibold">E.P.</span><span class="review-source">Oferteo, Google</span></footer>
+      </blockquote>
+      <blockquote class="review reveal">
+        <p>„Dużo czasu poświęcone na pomiary i&nbsp;wizualizacje. Panowie na montaż przyjeżdżają w&nbsp;kilka osób. Montaż zabudowy i&nbsp;kuchni w&nbsp;70&nbsp;m² mieszkaniu ogarnęli w&nbsp;3&nbsp;dni.”</p>
+        <footer class="mt-4 flex items-center justify-between gap-3"><span class="text-sm text-magenta-light font-semibold">K.</span><span class="review-source">Oferteo</span></footer>
+      </blockquote>
+      <blockquote class="review reveal">
+        <p>„U&nbsp;Pana Kamila zamówiliśmy meble do salonu, witryna i&nbsp;szafka RTV w&nbsp;kolorze kaszmirowym. Jakość i&nbsp;wykonanie spełniły nasze oczekiwania w&nbsp;200%!”</p>
+        <footer class="mt-4 flex items-center justify-between gap-3"><span class="text-sm text-magenta-light font-semibold">A.</span><span class="review-source">Oferteo</span></footer>
+      </blockquote>
+      <blockquote class="review reveal">
+        <p>„Pełna profeska, to czwarta kuchnia i&nbsp;nie widzę nikogo innego.”</p>
+        <footer class="mt-4 flex items-center justify-between gap-3"><span class="text-sm text-magenta-light font-semibold">T.</span><span class="review-source">Oferteo</span></footer>
+      </blockquote>
+    </div>
+    <div class="reviews-controls md:hidden" aria-label="Przewijanie opinii">
+      <button type="button" class="lb-btn !static reviews-prev" aria-label="Poprzednia opinia"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+      <div class="reviews-dots" id="reviews-dots"></div>
+      <button type="button" class="lb-btn !static reviews-next" aria-label="Następna opinia"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+    </div>
+    <div class="mt-8 reveal">
+      <a href="https://www.oferteo.pl/kammeble/firma/5540696" target="_blank" rel="noopener" class="text-link">Wszystkie opinie na Oferteo <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KONTAKT ============ -->
+<section id="kontakt" class="py-20 md:py-28 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="max-w-2xl mb-12 reveal">
+      <h2 class="heading-lg">Porozmawiajmy o&nbsp;Twoich meblach</h2>
+      <p class="lead mt-4">Najszybciej złapiesz nas telefonicznie w&nbsp;godzinach pracy. Jeśli nie odbierzemy, oddzwonimy. Projekty i&nbsp;zdjęcia wygodnie wysłać mailem.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-[1fr_1.25fr] gap-5">
+      <div class="surface p-6 md:p-8 reveal">
+        <ul class="space-y-6">
+          <li>
+            <a href="tel:509543139" class="group flex items-start gap-4 rounded-md focus-ring">
+              <span class="icon-chip shrink-0"><i data-lucide="phone" class="w-5 h-5"></i></span>
+              <span><span class="block text-sm text-ink-soft">Telefon</span><span class="block font-display font-bold text-2xl tracking-tight group-hover:text-magenta-dark transition-colors">509 543 139</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:kammeblekamilkucharski@gmail.com" class="group flex items-start gap-4 rounded-md focus-ring">
+              <span class="icon-chip shrink-0"><i data-lucide="mail" class="w-5 h-5"></i></span>
+              <span class="min-w-0"><span class="block text-sm text-ink-soft">E-mail</span><span class="block font-semibold text-lg break-all group-hover:text-magenta-dark transition-colors">kammeblekamilkucharski@gmail.com</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=%C5%81%C4%99g+27,+42-282+Kruszyna" target="_blank" rel="noopener" class="group flex items-start gap-4 rounded-md focus-ring">
+              <span class="icon-chip shrink-0"><i data-lucide="map-pin" class="w-5 h-5"></i></span>
+              <span><span class="block text-sm text-ink-soft">Adres pracowni</span><span class="block font-semibold text-lg group-hover:text-magenta-dark transition-colors">Łęg 27, 42-282 Kruszyna</span><span class="block text-sm text-ink-soft">koło Radomska</span><span class="block text-sm text-magenta-dark font-semibold mt-1">Wyznacz trasę</span></span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="mt-8 pt-6 border-t border-black/10">
+          <h3 class="font-display font-bold text-lg tracking-tight flex items-center gap-2"><i data-lucide="clock" class="w-5 h-5 text-magenta-dark"></i>Godziny pracy</h3>
+          <div class="mt-3 text-[0.98rem]">
+            <div class="hours-row" data-day="1"><span>Poniedziałek</span><span>7:00–17:00</span></div>
+            <div class="hours-row" data-day="2"><span>Wtorek</span><span>7:00–17:00</span></div>
+            <div class="hours-row" data-day="3"><span>Środa</span><span>7:00–17:00</span></div>
+            <div class="hours-row" data-day="4"><span>Czwartek</span><span>7:00–17:00</span></div>
+            <div class="hours-row" data-day="5"><span>Piątek</span><span>7:00–17:00</span></div>
+            <div class="hours-row" data-day="6"><span>Sobota</span><span>Zamknięte</span></div>
+            <div class="hours-row" data-day="0"><span>Niedziela</span><span>Zamknięte</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo min-h-[340px] lg:min-h-0 reveal">
+        <iframe title="Mapa dojazdu: Łęg 27, Kruszyna" src="https://maps.google.com/maps?q=KAM%20Meble%20Kamil%20Kucharski%2C%20%C5%81%C4%99g%2027%2C%2042-282%20Kruszyna&z=14&output=embed" class="w-full h-full min-h-[340px] border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink text-[#b8b8be] on-dark">
+  <div class="accent-bar w-full" aria-hidden="true"></div>
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-12 grid md:grid-cols-3 gap-8 text-[0.95rem]">
+    <div>
+      <img src="images/logo-light.webp" alt="KAM Meble" width="256" height="256" class="w-20 h-20" loading="lazy">
+      <p class="mt-3">KAM Meble Kamil Kucharski.<br>Meble na wymiar z&nbsp;województwa śląskiego.</p>
+    </div>
+    <div>
+      <p class="text-front font-semibold">Kontakt</p>
+      <p class="mt-2"><a href="tel:509543139" class="hover:text-magenta-light transition-colors">509 543 139</a><br><a href="mailto:kammeblekamilkucharski@gmail.com" class="hover:text-magenta-light transition-colors break-all">kammeblekamilkucharski@gmail.com</a><br>Łęg 27, 42-282 Kruszyna</p>
+    </div>
+    <div>
+      <p class="text-front font-semibold">Strona</p>
+      <p class="mt-2 flex flex-col gap-1">
+        <a href="uslugi.html" class="hover:text-magenta-light transition-colors w-fit">Usługi</a>
+        <a href="galeria.html" class="hover:text-magenta-light transition-colors w-fit">Galeria</a>
+        <a href="#opinie" class="hover:text-magenta-light transition-colors w-fit">Opinie</a>
+        <a href="#kontakt" class="hover:text-magenta-light transition-colors w-fit">Kontakt</a>
+      </p>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <p class="max-w-7xl mx-auto px-5 md:px-8 py-5 text-sm">© <span id="year">2026</span> KAM Meble Kamil Kucharski, Łęg</p>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia">
+  <button id="lb-close" class="lb-btn top-4 right-4" aria-label="Zamknij"><i data-lucide="x" class="w-5 h-5"></i></button>
+  <button id="lb-prev" class="lb-btn left-3 md:left-6 top-[calc(50%-1.5rem)]" aria-label="Poprzednie zdjęcie"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+  <button id="lb-next" class="lb-btn right-3 md:right-6 top-[calc(50%-1.5rem)]" aria-label="Następne zdjęcie"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+  <figure>
+    <img id="lb-img" src="" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+</div>
+
+<script src="main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

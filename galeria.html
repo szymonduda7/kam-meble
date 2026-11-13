@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeria realizacji | KAM Meble Kamil Kucharski</title>
+<meta name="description" content="Galeria realizacji KAM Meble: kuchnie, szafy przesuwne i wnękowe, garderoby, zabudowy przedpokoju, meble łazienkowe i pokojowe na wymiar. 123 zdjęcia z montaży u klientów.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.js"></script>
+<link rel="stylesheet" href="styles.css">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          plyta: '#f0f0f2',
+          front: '#ffffff',
+          ink: '#1b1b1d',
+          'ink-raised': '#27272b',
+          'ink-soft': '#55565c',
+          magenta: '#d7127e',
+          'magenta-dark': '#b00d66',
+          'magenta-light': '#f3609f',
+        },
+        fontFamily: {
+          sans: ['"Instrument Sans"', 'sans-serif'],
+          display: ['"Familjen Grotesk"', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+</head>
+<body class="bg-plyta text-ink">
+
+<!-- ============ HEADER ============ -->
+<header id="site-header" class="site-header fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 md:h-20 flex items-center justify-between gap-4">
+    <a href="index.html" class="brand-link focus-ring rounded-md flex items-center" aria-label="KAM Meble, strona główna">
+      <img src="images/logo.webp" alt="KAM Meble" width="256" height="256" class="brand-logo w-14 h-14 md:w-[4.5rem] md:h-[4.5rem]">
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-[0.95rem] font-medium" aria-label="Główna nawigacja">
+      <a href="uslugi.html" class="nav-link focus-ring">Usługi</a>
+      <a href="index.html#realizacje" class="nav-link focus-ring">Realizacje</a>
+      <a href="galeria.html" class="nav-link focus-ring" aria-current="page">Galeria</a>
+      <a href="index.html#opinie" class="nav-link focus-ring">Opinie</a>
+      <a href="index.html#kontakt" class="nav-link focus-ring">Kontakt</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <a href="tel:509543139" class="btn btn-dark px-5 py-2.5 text-sm">
+        <i data-lucide="phone" class="w-4 h-4"></i>
+        <span class="hidden sm:inline">509 543 139</span><span class="sm:hidden">Zadzwoń</span>
+      </a>
+      <button id="menu-toggle" class="md:hidden btn btn-outline w-11 h-11 !p-0" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-menu" class="mobile-menu md:hidden absolute left-0 right-0 top-full bg-front border-b border-black/10 px-5 py-4" aria-label="Menu mobilne">
+    <ul class="flex flex-col text-lg font-semibold">
+      <li><a href="uslugi.html" class="block py-3 border-b border-black/5">Usługi</a></li>
+      <li><a href="index.html#realizacje" class="block py-3 border-b border-black/5">Realizacje</a></li>
+      <li><a href="galeria.html" class="block py-3 border-b border-black/5">Galeria</a></li>
+      <li><a href="index.html#opinie" class="block py-3 border-b border-black/5">Opinie</a></li>
+      <li><a href="index.html#kontakt" class="block py-3">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- ============ INTRO ============ -->
+<section class="relative overflow-hidden pt-28 md:pt-36 pb-10 md:pb-12 px-5 md:px-8">
+  <div class="grain"></div>
+  <div class="relative max-w-7xl mx-auto">
+    <a href="index.html" class="text-link text-sm"><i data-lucide="arrow-left" class="w-4 h-4"></i> Strona główna</a>
+    <h1 class="heading-xl mt-6 max-w-4xl">Galeria <span class="mark">realizacji</span></h1>
+    <p class="lead mt-7 max-w-2xl">123 zdjęcia mebli zamontowanych u&nbsp;naszych klientów. Wybierz rodzaj mebli albo przeglądaj wszystko. Kliknij zdjęcie, żeby je powiększyć.</p>
+    <div class="mt-9 flex flex-wrap gap-2" role="group" aria-label="Filtruj zdjęcia">
+      <button type="button" class="btn btn-dark px-4 py-2 text-sm gallery-filter" data-filter="wszystkie" aria-pressed="true">Wszystkie <span class="opacity-60">123</span></button>
+      <button type="button" class="btn btn-outline px-4 py-2 text-sm gallery-filter" data-filter="kuchnie" aria-pressed="false">Kuchnie <span class="opacity-60">47</span></button>
+      <button type="button" class="btn btn-outline px-4 py-2 text-sm gallery-filter" data-filter="szafy" aria-pressed="false">Szafy <span class="opacity-60">44</span></button>
+      <button type="button" class="btn btn-outline px-4 py-2 text-sm gallery-filter" data-filter="przedpokoje" aria-pressed="false">Garderoby i przedpokoje <span class="opacity-60">17</span></button>
+      <button type="button" class="btn btn-outline px-4 py-2 text-sm gallery-filter" data-filter="lazienki" aria-pressed="false">Łazienki i pralnie <span class="opacity-60">8</span></button>
+      <button type="button" class="btn btn-outline px-4 py-2 text-sm gallery-filter" data-filter="pokoje" aria-pressed="false">Meble pokojowe <span class="opacity-60">7</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERIA ============ -->
+<section class="pb-20 md:pb-28 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="gallery">
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/10.webp" data-caption="Kuchnia z wyspą w dębie i czarną zabudową wysoką" aria-label="Powiększ: Kuchnia z wyspą w dębie i czarną zabudową wysoką"><img src="images/10.webp" alt="Kuchnia z wyspą w dębie i czarną zabudową wysoką" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/70.webp" data-caption="Czarna kuchnia z wyspą w kamieniu" aria-label="Powiększ: Czarna kuchnia z wyspą w kamieniu"><img src="images/70.webp" alt="Czarna kuchnia z wyspą w kamieniu" width="1600" height="1200" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/47.webp" data-caption="Szafa przesuwna z lustrami w czarnej ramie w stylu loft" aria-label="Powiększ: Szafa przesuwna z lustrami w czarnej ramie w stylu loft"><img src="images/47.webp" alt="Szafa przesuwna z lustrami w czarnej ramie w stylu loft" width="1600" height="1200" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/20.webp" data-caption="Kuchnia w dekorze dębu z czarną lodówką side by side" aria-label="Powiększ: Kuchnia w dekorze dębu z czarną lodówką side by side"><img src="images/20.webp" alt="Kuchnia w dekorze dębu z czarną lodówką side by side" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="przedpokoje" data-full="images/43.webp" data-caption="Zabudowa przedpokoju z szafą przesuwną i siedziskiem" aria-label="Powiększ: Zabudowa przedpokoju z szafą przesuwną i siedziskiem"><img src="images/43.webp" alt="Zabudowa przedpokoju z szafą przesuwną i siedziskiem" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="lazienki" data-full="images/34.webp" data-caption="Szafka pod dwie umywalki z frezowanymi frontami" aria-label="Powiększ: Szafka pod dwie umywalki z frezowanymi frontami"><img src="images/34.webp" alt="Szafka pod dwie umywalki z frezowanymi frontami" width="1600" height="1200" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/119.webp" data-caption="Kuchnia z półwyspem w dębie i podświetlaną witryną" aria-label="Powiększ: Kuchnia z półwyspem w dębie i podświetlaną witryną"><img src="images/119.webp" alt="Kuchnia z półwyspem w dębie i podświetlaną witryną" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/22.webp" data-caption="Grafitowa kuchnia z blatem w kamieniu" aria-label="Powiększ: Grafitowa kuchnia z blatem w kamieniu"><img src="images/22.webp" alt="Grafitowa kuchnia z blatem w kamieniu" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/51.webp" data-caption="Szafa przesuwna w dębie z czarną ramą i lustrem" aria-label="Powiększ: Szafa przesuwna w dębie z czarną ramą i lustrem"><img src="images/51.webp" alt="Szafa przesuwna w dębie z czarną ramą i lustrem" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="pokoje" data-full="images/32.webp" data-caption="Szafka RTV z lamelami w dębie na ścianie" aria-label="Powiększ: Szafka RTV z lamelami w dębie na ścianie"><img src="images/32.webp" alt="Szafka RTV z lamelami w dębie na ścianie" width="1600" height="1200" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/4.webp" data-caption="Kuchnia w literę L w bieli i dębie z czarną lodówką" aria-label="Powiększ: Kuchnia w literę L w bieli i dębie z czarną lodówką"><img src="images/4.webp" alt="Kuchnia w literę L w bieli i dębie z czarną lodówką" width="1600" height="1197" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="przedpokoje" data-full="images/84.webp" data-caption="Wnęka z siedziskiem i wieszakami w zabudowie przedpokoju" aria-label="Powiększ: Wnęka z siedziskiem i wieszakami w zabudowie przedpokoju"><img src="images/84.webp" alt="Wnęka z siedziskiem i wieszakami w zabudowie przedpokoju" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/72.webp" data-caption="Czarne fronty i podświetlony blat" aria-label="Powiększ: Czarne fronty i podświetlony blat"><img src="images/72.webp" alt="Czarne fronty i podświetlony blat" width="1600" height="1200" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="lazienki" data-full="images/37.webp" data-caption="Zabudowa pralki i suszarki w czarnej łazience" aria-label="Powiększ: Zabudowa pralki i suszarki w czarnej łazience"><img src="images/37.webp" alt="Zabudowa pralki i suszarki w czarnej łazience" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="pokoje" data-full="images/40.webp" data-caption="Podświetlana witryna i komoda pod skosem" aria-label="Powiększ: Podświetlana witryna i komoda pod skosem"><img src="images/40.webp" alt="Podświetlana witryna i komoda pod skosem" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/114.webp" data-caption="Kuchnia w dębie i bieli w literę U" aria-label="Powiększ: Kuchnia w dębie i bieli w literę U"><img src="images/114.webp" alt="Kuchnia w dębie i bieli w literę U" width="1600" height="720" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/21.webp" data-caption="Kuchnia z barkiem w dębie i winiarką" aria-label="Powiększ: Kuchnia z barkiem w dębie i winiarką"><img src="images/21.webp" alt="Kuchnia z barkiem w dębie i winiarką" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="przedpokoje" data-full="images/59.webp" data-caption="Szuflady wewnętrzne na buty" aria-label="Powiększ: Szuflady wewnętrzne na buty"><img src="images/59.webp" alt="Szuflady wewnętrzne na buty" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/102.webp" data-caption="Biała zabudowa z półkami i szufladami" aria-label="Powiększ: Biała zabudowa z półkami i szufladami"><img src="images/102.webp" alt="Biała zabudowa z półkami i szufladami" width="1600" height="720" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/1.webp" data-caption="Szuflady Blum z frontami w dekorze orzecha" aria-label="Powiększ: Szuflady Blum z frontami w dekorze orzecha"><img src="images/1.webp" alt="Szuflady Blum z frontami w dekorze orzecha" width="1198" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/2.webp" data-caption="Szafa przesuwna z lustrami w czarnej ramie w przedpokoju" aria-label="Powiększ: Szafa przesuwna z lustrami w czarnej ramie w przedpokoju"><img src="images/2.webp" alt="Szafa przesuwna z lustrami w czarnej ramie w przedpokoju" width="1198" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="pokoje" data-full="images/3.webp" data-caption="Biała szafka RTV z blatem w dekorze dębu i lamelami na ścianie" aria-label="Powiększ: Biała szafka RTV z blatem w dekorze dębu i lamelami na ścianie"><img src="images/3.webp" alt="Biała szafka RTV z blatem w dekorze dębu i lamelami na ścianie" width="1198" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/5.webp" data-caption="Kuchnia w bieli i dębie z oświetleniem na szynie" aria-label="Powiększ: Kuchnia w bieli i dębie z oświetleniem na szynie"><img src="images/5.webp" alt="Kuchnia w bieli i dębie z oświetleniem na szynie" width="1600" height="1197" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="przedpokoje" data-full="images/6.webp" data-caption="Zabudowa przedpokoju z wieszakami i siedziskiem w dekorze dębu" aria-label="Powiększ: Zabudowa przedpokoju z wieszakami i siedziskiem w dekorze dębu"><img src="images/6.webp" alt="Zabudowa przedpokoju z wieszakami i siedziskiem w dekorze dębu" width="1198" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="lazienki" data-full="images/7.webp" data-caption="Słupek na pralkę i suszarkę z otwartymi półkami" aria-label="Powiększ: Słupek na pralkę i suszarkę z otwartymi półkami"><img src="images/7.webp" alt="Słupek na pralkę i suszarkę z otwartymi półkami" width="1198" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/8.webp" data-caption="Kuchnia z półwyspem w dekorze dębu w jasnym wnętrzu" aria-label="Powiększ: Kuchnia z półwyspem w dekorze dębu w jasnym wnętrzu"><img src="images/8.webp" alt="Kuchnia z półwyspem w dekorze dębu w jasnym wnętrzu" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/9.webp" data-caption="Półwysep w dębie i słupek na pralkę z suszarką" aria-label="Powiększ: Półwysep w dębie i słupek na pralkę z suszarką"><img src="images/9.webp" alt="Półwysep w dębie i słupek na pralkę z suszarką" width="1198" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/11.webp" data-caption="Białe szafy od podłogi do sufitu" aria-label="Powiększ: Białe szafy od podłogi do sufitu"><img src="images/11.webp" alt="Białe szafy od podłogi do sufitu" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/12.webp" data-caption="Białe szafy z szufladami wewnętrznymi" aria-label="Powiększ: Białe szafy z szufladami wewnętrznymi"><img src="images/12.webp" alt="Białe szafy z szufladami wewnętrznymi" width="1198" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/13.webp" data-caption="Biała zabudowa wysoka w przedpokoju" aria-label="Powiększ: Biała zabudowa wysoka w przedpokoju"><img src="images/13.webp" alt="Biała zabudowa wysoka w przedpokoju" width="1198" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/14.webp" data-caption="Wnętrze białej szafy z drążkiem i szufladami" aria-label="Powiększ: Wnętrze białej szafy z drążkiem i szufladami"><img src="images/14.webp" alt="Wnętrze białej szafy z drążkiem i szufladami" width="1198" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/15.webp" data-caption="Kuchnia w bieli i dekorze dębu z czarną zabudową AGD" aria-label="Powiększ: Kuchnia w bieli i dekorze dębu z czarną zabudową AGD"><img src="images/15.webp" alt="Kuchnia w bieli i dekorze dębu z czarną zabudową AGD" width="1600" height="1197" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/16.webp" data-caption="Narożna kuchnia z dębowymi szafkami górnymi" aria-label="Powiększ: Narożna kuchnia z dębowymi szafkami górnymi"><img src="images/16.webp" alt="Narożna kuchnia z dębowymi szafkami górnymi" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/17.webp" data-caption="Szuflady wewnętrzne w białej szafie" aria-label="Powiększ: Szuflady wewnętrzne w białej szafie"><img src="images/17.webp" alt="Szuflady wewnętrzne w białej szafie" width="1198" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/18.webp" data-caption="Otwarte szuflady w kuchni w bieli i dębie" aria-label="Powiększ: Otwarte szuflady w kuchni w bieli i dębie"><img src="images/18.webp" alt="Otwarte szuflady w kuchni w bieli i dębie" width="1198" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="przedpokoje" data-full="images/19.webp" data-caption="Wieszak z tapicerowanym panelem i siedziskiem w dębie" aria-label="Powiększ: Wieszak z tapicerowanym panelem i siedziskiem w dębie"><img src="images/19.webp" alt="Wieszak z tapicerowanym panelem i siedziskiem w dębie" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/23.webp" data-caption="Grafitowa kuchnia w literę U pod oknem" aria-label="Powiększ: Grafitowa kuchnia w literę U pod oknem"><img src="images/23.webp" alt="Grafitowa kuchnia w literę U pod oknem" width="1600" height="1200" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/24.webp" data-caption="Grafitowa zabudowa wysoka z piekarnikami i cargo" aria-label="Powiększ: Grafitowa zabudowa wysoka z piekarnikami i cargo"><img src="images/24.webp" alt="Grafitowa zabudowa wysoka z piekarnikami i cargo" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/25.webp" data-caption="Kuchnia z podświetlonym barkiem i czarną zabudową" aria-label="Powiększ: Kuchnia z podświetlonym barkiem i czarną zabudową"><img src="images/25.webp" alt="Kuchnia z podświetlonym barkiem i czarną zabudową" width="1600" height="1200" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/26.webp" data-caption="Szuflada z wkładem na sztućce w grafitowej kuchni" aria-label="Powiększ: Szuflada z wkładem na sztućce w grafitowej kuchni"><img src="images/26.webp" alt="Szuflada z wkładem na sztućce w grafitowej kuchni" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/27.webp" data-caption="Słupek z piekarnikiem i mikrofalą w grafitowej kuchni" aria-label="Powiększ: Słupek z piekarnikiem i mikrofalą w grafitowej kuchni"><img src="images/27.webp" alt="Słupek z piekarnikiem i mikrofalą w grafitowej kuchni" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/28.webp" data-caption="Narożny blat w ciemnym kamieniu pod oknem" aria-label="Powiększ: Narożny blat w ciemnym kamieniu pod oknem"><img src="images/28.webp" alt="Narożny blat w ciemnym kamieniu pod oknem" width="1600" height="1200" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/29.webp" data-caption="Czarna szafa przy ścianie z cegły i półki w dębie" aria-label="Powiększ: Czarna szafa przy ścianie z cegły i półki w dębie"><img src="images/29.webp" alt="Czarna szafa przy ścianie z cegły i półki w dębie" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/30.webp" data-caption="Wnętrze czarnej szafy z półkami w dekorze dębu" aria-label="Powiększ: Wnętrze czarnej szafy z półkami w dekorze dębu"><img src="images/30.webp" alt="Wnętrze czarnej szafy z półkami w dekorze dębu" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="pokoje" data-full="images/31.webp" data-caption="Czarna zabudowa i blat w dębie przy ścianie z cegły" aria-label="Powiększ: Czarna zabudowa i blat w dębie przy ścianie z cegły"><img src="images/31.webp" alt="Czarna zabudowa i blat w dębie przy ścianie z cegły" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="lazienki" data-full="images/33.webp" data-caption="Łazienka z szafką pod dwie umywalki i czarnym słupkiem" aria-label="Powiększ: Łazienka z szafką pod dwie umywalki i czarnym słupkiem"><img src="images/33.webp" alt="Łazienka z szafką pod dwie umywalki i czarnym słupkiem" width="1600" height="948" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="lazienki" data-full="images/35.webp" data-caption="Czarny słupek łazienkowy z półkami" aria-label="Powiększ: Czarny słupek łazienkowy z półkami"><img src="images/35.webp" alt="Czarny słupek łazienkowy z półkami" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="lazienki" data-full="images/36.webp" data-caption="Czarna zabudowa łazienkowa z frezowanymi frontami" aria-label="Powiększ: Czarna zabudowa łazienkowa z frezowanymi frontami"><img src="images/36.webp" alt="Czarna zabudowa łazienkowa z frezowanymi frontami" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="lazienki" data-full="images/38.webp" data-caption="Szuflada z przegrodą na pranie" aria-label="Powiększ: Szuflada z przegrodą na pranie"><img src="images/38.webp" alt="Szuflada z przegrodą na pranie" width="1600" height="1200" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="lazienki" data-full="images/39.webp" data-caption="Wysuwany kosz na pranie w zabudowie" aria-label="Powiększ: Wysuwany kosz na pranie w zabudowie"><img src="images/39.webp" alt="Wysuwany kosz na pranie w zabudowie" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="pokoje" data-full="images/41.webp" data-caption="Komoda w dębie z czarnymi frontami" aria-label="Powiększ: Komoda w dębie z czarnymi frontami"><img src="images/41.webp" alt="Komoda w dębie z czarnymi frontami" width="1600" height="1200" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/42.webp" data-caption="Białe szafy pod skosem z długimi uchwytami" aria-label="Powiększ: Białe szafy pod skosem z długimi uchwytami"><img src="images/42.webp" alt="Białe szafy pod skosem z długimi uchwytami" width="1600" height="1200" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="przedpokoje" data-full="images/44.webp" data-caption="Szafa przesuwna w dekorze betonu z lustrem" aria-label="Powiększ: Szafa przesuwna w dekorze betonu z lustrem"><img src="images/44.webp" alt="Szafa przesuwna w dekorze betonu z lustrem" width="1600" height="1200" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/45.webp" data-caption="Biała szafa z czarnymi pasami w przedpokoju" aria-label="Powiększ: Biała szafa z czarnymi pasami w przedpokoju"><img src="images/45.webp" alt="Biała szafa z czarnymi pasami w przedpokoju" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/46.webp" data-caption="Biała zabudowa z wnęką i czarnymi akcentami" aria-label="Powiększ: Biała zabudowa z wnęką i czarnymi akcentami"><img src="images/46.webp" alt="Biała zabudowa z wnęką i czarnymi akcentami" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="przedpokoje" data-full="images/48.webp" data-caption="Biała garderoba z szufladami i półkami" aria-label="Powiększ: Biała garderoba z szufladami i półkami"><img src="images/48.webp" alt="Biała garderoba z szufladami i półkami" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/49.webp" data-caption="Biała szafa przesuwna z lustrem" aria-label="Powiększ: Biała szafa przesuwna z lustrem"><img src="images/49.webp" alt="Biała szafa przesuwna z lustrem" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/50.webp" data-caption="Wnętrze szafy z szufladami i drążkiem" aria-label="Powiększ: Wnętrze szafy z szufladami i drążkiem"><img src="images/50.webp" alt="Wnętrze szafy z szufladami i drążkiem" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/52.webp" data-caption="Szafa przesuwna z lustrami i półkami obok" aria-label="Powiększ: Szafa przesuwna z lustrami i półkami obok"><img src="images/52.webp" alt="Szafa przesuwna z lustrami i półkami obok" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/53.webp" data-caption="Szafa przesuwna z dwoma lustrami w czarnej ramie" aria-label="Powiększ: Szafa przesuwna z dwoma lustrami w czarnej ramie"><img src="images/53.webp" alt="Szafa przesuwna z dwoma lustrami w czarnej ramie" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="przedpokoje" data-full="images/54.webp" data-caption="Garderoba z regałem i szufladami w dekorze drewna" aria-label="Powiększ: Garderoba z regałem i szufladami w dekorze drewna"><img src="images/54.webp" alt="Garderoba z regałem i szufladami w dekorze drewna" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/55.webp" data-caption="Wnętrze szafy przesuwnej z drążkiem" aria-label="Powiększ: Wnętrze szafy przesuwnej z drążkiem"><img src="images/55.webp" alt="Wnętrze szafy przesuwnej z drążkiem" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/56.webp" data-caption="Biała szafa z czarnymi pasami" aria-label="Powiększ: Biała szafa z czarnymi pasami"><img src="images/56.webp" alt="Biała szafa z czarnymi pasami" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="przedpokoje" data-full="images/57.webp" data-caption="Zabudowa przedpokoju w dekorze drewna z siedziskiem" aria-label="Powiększ: Zabudowa przedpokoju w dekorze drewna z siedziskiem"><img src="images/57.webp" alt="Zabudowa przedpokoju w dekorze drewna z siedziskiem" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="przedpokoje" data-full="images/58.webp" data-caption="Przedpokój z szafą przesuwną i półkami" aria-label="Powiększ: Przedpokój z szafą przesuwną i półkami"><img src="images/58.webp" alt="Przedpokój z szafą przesuwną i półkami" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/60.webp" data-caption="Szara szafa przesuwna z lustrem" aria-label="Powiększ: Szara szafa przesuwna z lustrem"><img src="images/60.webp" alt="Szara szafa przesuwna z lustrem" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/61.webp" data-caption="Szafa przesuwna z półkami i koszami" aria-label="Powiększ: Szafa przesuwna z półkami i koszami"><img src="images/61.webp" alt="Szafa przesuwna z półkami i koszami" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="przedpokoje" data-full="images/62.webp" data-caption="Biała zabudowa przedpokoju z wnęką i lustrem" aria-label="Powiększ: Biała zabudowa przedpokoju z wnęką i lustrem"><img src="images/62.webp" alt="Biała zabudowa przedpokoju z wnęką i lustrem" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="przedpokoje" data-full="images/63.webp" data-caption="Biała zabudowa przedpokoju do sufitu" aria-label="Powiększ: Biała zabudowa przedpokoju do sufitu"><img src="images/63.webp" alt="Biała zabudowa przedpokoju do sufitu" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="przedpokoje" data-full="images/64.webp" data-caption="Wnętrze zabudowy przedpokoju z półkami" aria-label="Powiększ: Wnętrze zabudowy przedpokoju z półkami"><img src="images/64.webp" alt="Wnętrze zabudowy przedpokoju z półkami" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="przedpokoje" data-full="images/65.webp" data-caption="Zabudowa przedpokoju z otwartymi szufladami" aria-label="Powiększ: Zabudowa przedpokoju z otwartymi szufladami"><img src="images/65.webp" alt="Zabudowa przedpokoju z otwartymi szufladami" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/66.webp" data-caption="Kuchnia w czerni i dębie z barkiem" aria-label="Powiększ: Kuchnia w czerni i dębie z barkiem"><img src="images/66.webp" alt="Kuchnia w czerni i dębie z barkiem" width="721" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/67.webp" data-caption="Stół w dębie i lamele przy kuchni" aria-label="Powiększ: Stół w dębie i lamele przy kuchni"><img src="images/67.webp" alt="Stół w dębie i lamele przy kuchni" width="721" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/68.webp" data-caption="Czarna kuchnia z dębowym akcentem i podświetleniem" aria-label="Powiększ: Czarna kuchnia z dębowym akcentem i podświetleniem"><img src="images/68.webp" alt="Czarna kuchnia z dębowym akcentem i podświetleniem" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/69.webp" data-caption="Czarna zabudowa wysoka z ukrytą pralką" aria-label="Powiększ: Czarna zabudowa wysoka z ukrytą pralką"><img src="images/69.webp" alt="Czarna zabudowa wysoka z ukrytą pralką" width="721" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/71.webp" data-caption="Czarna zabudowa z lodówką side by side i wyspą" aria-label="Powiększ: Czarna zabudowa z lodówką side by side i wyspą"><img src="images/71.webp" alt="Czarna zabudowa z lodówką side by side i wyspą" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/73.webp" data-caption="Słupek cargo z koszami w czarnej kuchni" aria-label="Powiększ: Słupek cargo z koszami w czarnej kuchni"><img src="images/73.webp" alt="Słupek cargo z koszami w czarnej kuchni" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/74.webp" data-caption="Szuflada z koszem na śmieci pod zlewem" aria-label="Powiększ: Szuflada z koszem na śmieci pod zlewem"><img src="images/74.webp" alt="Szuflada z koszem na śmieci pod zlewem" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/75.webp" data-caption="Wyspa z szufladami w ciemnym kamieniu" aria-label="Powiększ: Wyspa z szufladami w ciemnym kamieniu"><img src="images/75.webp" alt="Wyspa z szufladami w ciemnym kamieniu" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/76.webp" data-caption="Otwarte słupki spiżarni przy wyspie" aria-label="Powiększ: Otwarte słupki spiżarni przy wyspie"><img src="images/76.webp" alt="Otwarte słupki spiżarni przy wyspie" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/77.webp" data-caption="Szafa przesuwna z lustrem i panelem w dekorze drewna" aria-label="Powiększ: Szafa przesuwna z lustrem i panelem w dekorze drewna"><img src="images/77.webp" alt="Szafa przesuwna z lustrem i panelem w dekorze drewna" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/78.webp" data-caption="Szafa z otwartymi półkami i szufladami w przedpokoju" aria-label="Powiększ: Szafa z otwartymi półkami i szufladami w przedpokoju"><img src="images/78.webp" alt="Szafa z otwartymi półkami i szufladami w przedpokoju" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/79.webp" data-caption="Białe szafy pod skosem" aria-label="Powiększ: Białe szafy pod skosem"><img src="images/79.webp" alt="Białe szafy pod skosem" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/80.webp" data-caption="Białe szafy pod skosem na poddaszu" aria-label="Powiększ: Białe szafy pod skosem na poddaszu"><img src="images/80.webp" alt="Białe szafy pod skosem na poddaszu" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/81.webp" data-caption="Wnętrze szafy pod skosem z drążkiem" aria-label="Powiększ: Wnętrze szafy pod skosem z drążkiem"><img src="images/81.webp" alt="Wnętrze szafy pod skosem z drążkiem" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/82.webp" data-caption="Wnętrze szafy przesuwnej z półkami" aria-label="Powiększ: Wnętrze szafy przesuwnej z półkami"><img src="images/82.webp" alt="Wnętrze szafy przesuwnej z półkami" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/83.webp" data-caption="Szafa przesuwna w dekorze drewna z czarnymi pasami" aria-label="Powiększ: Szafa przesuwna w dekorze drewna z czarnymi pasami"><img src="images/83.webp" alt="Szafa przesuwna w dekorze drewna z czarnymi pasami" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="przedpokoje" data-full="images/85.webp" data-caption="Tapicerowana wnęka z wieszakami w przedpokoju" aria-label="Powiększ: Tapicerowana wnęka z wieszakami w przedpokoju"><img src="images/85.webp" alt="Tapicerowana wnęka z wieszakami w przedpokoju" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="przedpokoje" data-full="images/86.webp" data-caption="Zabudowa przedpokoju z wnęką na płaszcze" aria-label="Powiększ: Zabudowa przedpokoju z wnęką na płaszcze"><img src="images/86.webp" alt="Zabudowa przedpokoju z wnęką na płaszcze" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="przedpokoje" data-full="images/87.webp" data-caption="Szafa przesuwna z siatką i siedzisko w przedpokoju" aria-label="Powiększ: Szafa przesuwna z siatką i siedzisko w przedpokoju"><img src="images/87.webp" alt="Szafa przesuwna z siatką i siedzisko w przedpokoju" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/88.webp" data-caption="Kuchnia w bieli i dębie przy dużym oknie" aria-label="Powiększ: Kuchnia w bieli i dębie przy dużym oknie"><img src="images/88.webp" alt="Kuchnia w bieli i dębie przy dużym oknie" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/89.webp" data-caption="Kremowa kuchnia z blatem w dębie" aria-label="Powiększ: Kremowa kuchnia z blatem w dębie"><img src="images/89.webp" alt="Kremowa kuchnia z blatem w dębie" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/90.webp" data-caption="Kuchnia z czarną lodówką w zabudowie" aria-label="Powiększ: Kuchnia z czarną lodówką w zabudowie"><img src="images/90.webp" alt="Kuchnia z czarną lodówką w zabudowie" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/91.webp" data-caption="Szuflady w kuchni w bieli i dębie" aria-label="Powiększ: Szuflady w kuchni w bieli i dębie"><img src="images/91.webp" alt="Szuflady w kuchni w bieli i dębie" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/92.webp" data-caption="Białe szafy pod skosem z długimi uchwytami" aria-label="Powiększ: Białe szafy pod skosem z długimi uchwytami"><img src="images/92.webp" alt="Białe szafy pod skosem z długimi uchwytami" width="1600" height="720" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/93.webp" data-caption="Wnętrze szafy z półkami w sypialni" aria-label="Powiększ: Wnętrze szafy z półkami w sypialni"><img src="images/93.webp" alt="Wnętrze szafy z półkami w sypialni" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/94.webp" data-caption="Szare szafy z długimi uchwytami w sypialni" aria-label="Powiększ: Szare szafy z długimi uchwytami w sypialni"><img src="images/94.webp" alt="Szare szafy z długimi uchwytami w sypialni" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/95.webp" data-caption="Szare szafy od podłogi do sufitu" aria-label="Powiększ: Szare szafy od podłogi do sufitu"><img src="images/95.webp" alt="Szare szafy od podłogi do sufitu" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/97.webp" data-caption="Szafa przesuwna w dębie z lustrem" aria-label="Powiększ: Szafa przesuwna w dębie z lustrem"><img src="images/97.webp" alt="Szafa przesuwna w dębie z lustrem" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/98.webp" data-caption="Szafa przesuwna z lustrami w jasnym pokoju" aria-label="Powiększ: Szafa przesuwna z lustrami w jasnym pokoju"><img src="images/98.webp" alt="Szafa przesuwna z lustrami w jasnym pokoju" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/99.webp" data-caption="Biała szafa z półkami i drążkiem" aria-label="Powiększ: Biała szafa z półkami i drążkiem"><img src="images/99.webp" alt="Biała szafa z półkami i drążkiem" width="1600" height="720" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/100.webp" data-caption="Szafa przesuwna z lustrem i białymi panelami" aria-label="Powiększ: Szafa przesuwna z lustrem i białymi panelami"><img src="images/100.webp" alt="Szafa przesuwna z lustrem i białymi panelami" width="1600" height="720" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/101.webp" data-caption="Szafa przesuwna w stylu loft z czarnymi szprosami" aria-label="Powiększ: Szafa przesuwna w stylu loft z czarnymi szprosami"><img src="images/101.webp" alt="Szafa przesuwna w stylu loft z czarnymi szprosami" width="1600" height="720" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="pokoje" data-full="images/103.webp" data-caption="Biała zabudowa ściany z wnęką w dębie" aria-label="Powiększ: Biała zabudowa ściany z wnęką w dębie"><img src="images/103.webp" alt="Biała zabudowa ściany z wnęką w dębie" width="1600" height="720" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="pokoje" data-full="images/104.webp" data-caption="Biała zabudowa z półkami i miejscem do pracy" aria-label="Powiększ: Biała zabudowa z półkami i miejscem do pracy"><img src="images/104.webp" alt="Biała zabudowa z półkami i miejscem do pracy" width="1600" height="720" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/105.webp" data-caption="Białe szafy pod skosem" aria-label="Powiększ: Białe szafy pod skosem"><img src="images/105.webp" alt="Białe szafy pod skosem" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/106.webp" data-caption="Wnętrze białej szafy z szufladami" aria-label="Powiększ: Wnętrze białej szafy z szufladami"><img src="images/106.webp" alt="Wnętrze białej szafy z szufladami" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/107.webp" data-caption="Szuflady wewnętrzne w szafie przesuwnej" aria-label="Powiększ: Szuflady wewnętrzne w szafie przesuwnej"><img src="images/107.webp" alt="Szuflady wewnętrzne w szafie przesuwnej" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/108.webp" data-caption="Szafa przesuwna z lustrami w przedpokoju" aria-label="Powiększ: Szafa przesuwna z lustrami w przedpokoju"><img src="images/108.webp" alt="Szafa przesuwna z lustrami w przedpokoju" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/109.webp" data-caption="Szafa przesuwna z lustrami w czarnej ramie" aria-label="Powiększ: Szafa przesuwna z lustrami w czarnej ramie"><img src="images/109.webp" alt="Szafa przesuwna z lustrami w czarnej ramie" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="szafy" data-full="images/110.webp" data-caption="Wnętrze szafy z półkami i szufladami" aria-label="Powiększ: Wnętrze szafy z półkami i szufladami"><img src="images/110.webp" alt="Wnętrze szafy z półkami i szufladami" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/111.webp" data-caption="Czarna kuchnia z półwyspem" aria-label="Powiększ: Czarna kuchnia z półwyspem"><img src="images/111.webp" alt="Czarna kuchnia z półwyspem" width="1600" height="720" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/112.webp" data-caption="Biała kuchnia z blatem w dębie" aria-label="Powiększ: Biała kuchnia z blatem w dębie"><img src="images/112.webp" alt="Biała kuchnia z blatem w dębie" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/113.webp" data-caption="Biała kuchnia z półwyspem i witryną" aria-label="Powiększ: Biała kuchnia z półwyspem i witryną"><img src="images/113.webp" alt="Biała kuchnia z półwyspem i witryną" width="1600" height="720" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/115.webp" data-caption="Biała kuchnia na wysoki połysk z blatem w dębie" aria-label="Powiększ: Biała kuchnia na wysoki połysk z blatem w dębie"><img src="images/115.webp" alt="Biała kuchnia na wysoki połysk z blatem w dębie" width="555" height="416" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/116.webp" data-caption="Biała kuchnia z lodówką side by side" aria-label="Powiększ: Biała kuchnia z lodówką side by side"><img src="images/116.webp" alt="Biała kuchnia z lodówką side by side" width="1600" height="720" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/117.webp" data-caption="Kuchnia z leśnym panelem nad blatem" aria-label="Powiększ: Kuchnia z leśnym panelem nad blatem"><img src="images/117.webp" alt="Kuchnia z leśnym panelem nad blatem" width="640" height="288" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/118.webp" data-caption="Biała kuchnia z podświetleniem pod szafkami" aria-label="Powiększ: Biała kuchnia z podświetleniem pod szafkami"><img src="images/118.webp" alt="Biała kuchnia z podświetleniem pod szafkami" width="720" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/120.webp" data-caption="Kuchnia w bieli i dębie z podświetlaną witryną" aria-label="Powiększ: Kuchnia w bieli i dębie z podświetlaną witryną"><img src="images/120.webp" alt="Kuchnia w bieli i dębie z podświetlaną witryną" width="1600" height="1198" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/121.webp" data-caption="Kuchnia z barkiem w dębie i witryną" aria-label="Powiększ: Kuchnia z barkiem w dębie i witryną"><img src="images/121.webp" alt="Kuchnia z barkiem w dębie i witryną" width="1600" height="1198" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/122.webp" data-caption="Słupek z wysuwanymi koszami obok czarnej lodówki" aria-label="Powiększ: Słupek z wysuwanymi koszami obok czarnej lodówki"><img src="images/122.webp" alt="Słupek z wysuwanymi koszami obok czarnej lodówki" width="1198" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/123.webp" data-caption="Narożnik z półkami wysuwanymi" aria-label="Powiększ: Narożnik z półkami wysuwanymi"><img src="images/123.webp" alt="Narożnik z półkami wysuwanymi" width="1597" height="1600" loading="lazy"></button>
+      <button type="button" class="gallery-item" data-cat="kuchnie" data-full="images/124.webp" data-caption="Biała zabudowa wysoka z czarną lodówką" aria-label="Powiększ: Biała zabudowa wysoka z czarną lodówką"><img src="images/124.webp" alt="Biała zabudowa wysoka z czarną lodówką" width="1198" height="1600" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="relative bg-ink text-front on-dark overflow-hidden">
+  <div class="grain"></div>
+  <div class="accent-bar w-full" aria-hidden="true"></div>
+  <div class="relative max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-24 grid lg:grid-cols-[1.2fr_1fr] gap-10 items-center">
+    <div>
+      <h2 class="heading-lg">Coś wpadło Ci w&nbsp;oko? <span class="text-magenta-light">Zrobimy to pod Twój wymiar.</span></h2>
+      <p class="lead mt-5 max-w-2xl">Zadzwoń albo wyślij zdjęcie inspiracji. Umówimy pomiar, doradzimy materiały i&nbsp;przygotujemy projekt z&nbsp;wizualizacją.</p>
+    </div>
+    <div class="flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end">
+      <a href="tel:509543139" class="btn btn-magenta px-7 py-4 text-base"><i data-lucide="phone" class="w-5 h-5"></i> 509 543 139</a>
+      <a href="mailto:kammeblekamilkucharski@gmail.com?subject=Wycena%20mebli" class="btn btn-outline px-7 py-4 text-base"><i data-lucide="mail" class="w-5 h-5"></i> Wyślij zdjęcie mailem</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink text-[#b8b8be] on-dark">
+  <div class="accent-bar w-full" aria-hidden="true"></div>
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-12 grid md:grid-cols-3 gap-8 text-[0.95rem]">
+    <div>
+      <img src="images/logo-light.webp" alt="KAM Meble" width="256" height="256" class="w-20 h-20" loading="lazy">
+      <p class="mt-3">KAM Meble Kamil Kucharski.<br>Meble na wymiar z&nbsp;województwa śląskiego.</p>
+    </div>
+    <div>
+      <p class="text-front font-semibold">Kontakt</p>
+      <p class="mt-2"><a href="tel:509543139" class="hover:text-magenta-light transition-colors">509 543 139</a><br><a href="mailto:kammeblekamilkucharski@gmail.com" class="hover:text-magenta-light transition-colors break-all">kammeblekamilkucharski@gmail.com</a><br>Łęg 27, 42-282 Kruszyna</p>
+    </div>
+    <div>
+      <p class="text-front font-semibold">Strona</p>
+      <p class="mt-2 flex flex-col gap-1">
+        <a href="uslugi.html" class="hover:text-magenta-light transition-colors w-fit">Usługi</a>
+        <a href="galeria.html" class="hover:text-magenta-light transition-colors w-fit">Galeria</a>
+        <a href="index.html#opinie" class="hover:text-magenta-light transition-colors w-fit">Opinie</a>
+        <a href="index.html#kontakt" class="hover:text-magenta-light transition-colors w-fit">Kontakt</a>
+      </p>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <p class="max-w-7xl mx-auto px-5 md:px-8 py-5 text-sm">© <span id="year">2026</span> KAM Meble Kamil Kucharski, Łęg</p>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia">
+  <button id="lb-close" class="lb-btn top-4 right-4" aria-label="Zamknij"><i data-lucide="x" class="w-5 h-5"></i></button>
+  <button id="lb-prev" class="lb-btn left-3 md:left-6 top-[calc(50%-1.5rem)]" aria-label="Poprzednie zdjęcie"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+  <button id="lb-next" class="lb-btn right-3 md:right-6 top-[calc(50%-1.5rem)]" aria-label="Następne zdjęcie"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+  <figure>
+    <img id="lb-img" src="" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+</div>
+
+<script src="main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

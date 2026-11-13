@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usługi | KAM Meble Kamil Kucharski, meble na wymiar</title>
+<meta name="description" content="Usługi KAM Meble: meble kuchenne, szafy wnękowe i przesuwne, garderoby i zabudowy przedpokoju, meble łazienkowe, pokojowe i biurowe na wymiar. Pomiar, projekt 3D, produkcja i montaż.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.js"></script>
+<link rel="stylesheet" href="styles.css">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          plyta: '#f0f0f2',
+          front: '#ffffff',
+          ink: '#1b1b1d',
+          'ink-raised': '#27272b',
+          'ink-soft': '#55565c',
+          magenta: '#d7127e',
+          'magenta-dark': '#b00d66',
+          'magenta-light': '#f3609f',
+        },
+        fontFamily: {
+          sans: ['"Instrument Sans"', 'sans-serif'],
+          display: ['"Familjen Grotesk"', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+</head>
+<body class="bg-plyta text-ink">
+
+<!-- ============ HEADER ============ -->
+<header id="site-header" class="site-header fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 md:h-20 flex items-center justify-between gap-4">
+    <a href="index.html" class="brand-link focus-ring rounded-md flex items-center" aria-label="KAM Meble, strona główna">
+      <img src="images/logo.webp" alt="KAM Meble" width="256" height="256" class="brand-logo w-14 h-14 md:w-[4.5rem] md:h-[4.5rem]">
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-[0.95rem] font-medium" aria-label="Główna nawigacja">
+      <a href="uslugi.html" class="nav-link focus-ring" aria-current="page">Usługi</a>
+      <a href="index.html#realizacje" class="nav-link focus-ring">Realizacje</a>
+      <a href="galeria.html" class="nav-link focus-ring">Galeria</a>
+      <a href="index.html#opinie" class="nav-link focus-ring">Opinie</a>
+      <a href="index.html#kontakt" class="nav-link focus-ring">Kontakt</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <a href="tel:509543139" class="btn btn-dark px-5 py-2.5 text-sm">
+        <i data-lucide="phone" class="w-4 h-4"></i>
+        <span class="hidden sm:inline">509 543 139</span><span class="sm:hidden">Zadzwoń</span>
+      </a>
+      <button id="menu-toggle" class="md:hidden btn btn-outline w-11 h-11 !p-0" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-menu" class="mobile-menu md:hidden absolute left-0 right-0 top-full bg-front border-b border-black/10 px-5 py-4" aria-label="Menu mobilne">
+    <ul class="flex flex-col text-lg font-semibold">
+      <li><a href="uslugi.html" class="block py-3 border-b border-black/5">Usługi</a></li>
+      <li><a href="index.html#realizacje" class="block py-3 border-b border-black/5">Realizacje</a></li>
+      <li><a href="galeria.html" class="block py-3 border-b border-black/5">Galeria</a></li>
+      <li><a href="index.html#opinie" class="block py-3 border-b border-black/5">Opinie</a></li>
+      <li><a href="index.html#kontakt" class="block py-3">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- ============ INTRO ============ -->
+<section class="relative overflow-hidden pt-28 md:pt-36 pb-14 md:pb-16 px-5 md:px-8">
+  <div class="grain"></div>
+  <div class="relative max-w-7xl mx-auto">
+    <a href="index.html" class="text-link text-sm"><i data-lucide="arrow-left" class="w-4 h-4"></i> Strona główna</a>
+    <h1 class="heading-xl mt-6 max-w-4xl">Meble na wymiar <span class="mark">do każdego pomieszczenia</span></h1>
+    <p class="lead mt-7 max-w-2xl">Każde zlecenie prowadzimy od początku do końca: pomiar i&nbsp;doradztwo u&nbsp;Ciebie, projekt z&nbsp;wizualizacją 3D, produkcja w&nbsp;naszej pracowni i&nbsp;montaż. Pracujemy na sprawdzonych płytach, frontach i&nbsp;okuciach Blum.</p>
+    <nav class="mt-9 flex flex-wrap gap-2" aria-label="Przejdź do usługi">
+      <a href="#kuchnie" class="btn btn-outline px-4 py-2 text-sm">Meble kuchenne</a>
+      <a href="#szafy" class="btn btn-outline px-4 py-2 text-sm">Szafy</a>
+      <a href="#garderoby" class="btn btn-outline px-4 py-2 text-sm">Garderoby i przedpokoje</a>
+      <a href="#lazienki" class="btn btn-outline px-4 py-2 text-sm">Łazienki i pralnie</a>
+      <a href="#pokojowe" class="btn btn-outline px-4 py-2 text-sm">Meble pokojowe</a>
+      <a href="#biurowe" class="btn btn-outline px-4 py-2 text-sm">Zabudowy biurowe</a>
+    </nav>
+  </div>
+</section>
+
+<!-- ============ USŁUGI ============ -->
+<section class="pb-20 md:pb-28 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto flex flex-col gap-5 md:gap-6">
+
+    <article id="kuchnie" class="surface overflow-hidden grid lg:grid-cols-2 reveal">
+      <div class="photo !rounded-none !shadow-none aspect-[4/3] lg:aspect-auto lg:min-h-[460px]">
+        <img src="images/70.webp" alt="Czarna kuchnia z wyspą w ciemnym kamieniu" loading="lazy">
+      </div>
+      <div class="p-7 md:p-10 lg:p-12 flex flex-col justify-center">
+        <span class="icon-chip"><i data-lucide="cooking-pot" class="w-5 h-5"></i></span>
+        <h2 class="heading-lg mt-5">Meble kuchenne</h2>
+        <p class="lead mt-4">Kuchnie robimy najczęściej. Układ planujemy razem z&nbsp;Tobą, tak żeby każdy centymetr się przydał, a&nbsp;przed produkcją pokazujemy wizualizację.</p>
+        <ul class="mt-6 space-y-2.5 text-ink-soft">
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Kuchnie w&nbsp;literę L i&nbsp;U, z&nbsp;wyspą, półwyspem albo barkiem</li>
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Zabudowa AGD w&nbsp;słupkach, lodówki side by side, ukryta pralka</li>
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Szuflady Blum z&nbsp;cichym domykiem, cargo, narożniki z&nbsp;półkami wysuwanymi</li>
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Fronty matowe, na wysoki połysk i&nbsp;lakierowane, podświetlenie LED</li>
+        </ul>
+      </div>
+    </article>
+
+    <article id="szafy" class="surface overflow-hidden grid lg:grid-cols-2 reveal">
+      <div class="photo !rounded-none !shadow-none aspect-[4/3] lg:aspect-auto lg:min-h-[460px] lg:order-2">
+        <img src="images/51.webp" alt="Szafa przesuwna z frontami w dekorze dębu, czarną ramą i lustrem" loading="lazy">
+      </div>
+      <div class="p-7 md:p-10 lg:p-12 flex flex-col justify-center lg:order-1">
+        <span class="icon-chip"><i data-lucide="door-closed" class="w-5 h-5"></i></span>
+        <h2 class="heading-lg mt-5">Szafy wnękowe i&nbsp;przesuwne</h2>
+        <p class="lead mt-4">Szafy wykorzystujące całą wysokość pomieszczenia, także pod skosem na poddaszu. Środek planujemy pod to, co chcesz w&nbsp;nich trzymać.</p>
+        <ul class="mt-6 space-y-2.5 text-ink-soft">
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Drzwi przesuwne z&nbsp;lustrem, w&nbsp;dekorze drewna lub w&nbsp;czarnej ramie w&nbsp;stylu loft</li>
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Szafy z&nbsp;frontami uchylnymi od podłogi do sufitu</li>
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Zabudowy pod skosem i&nbsp;we wnękach</li>
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Szuflady wewnętrzne, drążki, półki i&nbsp;kosze</li>
+        </ul>
+      </div>
+    </article>
+
+    <article id="garderoby" class="surface overflow-hidden grid lg:grid-cols-2 reveal">
+      <div class="photo !rounded-none !shadow-none aspect-[4/3] lg:aspect-auto lg:min-h-[460px]">
+        <img src="images/43.webp" alt="Zabudowa przedpokoju z szafą przesuwną, wieszakami i siedziskiem" loading="lazy" style="object-position:50% 60%">
+      </div>
+      <div class="p-7 md:p-10 lg:p-12 flex flex-col justify-center">
+        <span class="icon-chip"><i data-lucide="shirt" class="w-5 h-5"></i></span>
+        <h2 class="heading-lg mt-5">Garderoby i&nbsp;przedpokoje</h2>
+        <p class="lead mt-4">Przedpokój, w&nbsp;którym wszystko ma swoje miejsce: płaszcze, buty, torby i&nbsp;rzeczy na co dzień.</p>
+        <ul class="mt-6 space-y-2.5 text-ink-soft">
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Zabudowy przedpokoju z&nbsp;siedziskiem i&nbsp;wieszakami</li>
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Tapicerowane panele we wnęce</li>
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Garderoby z&nbsp;regałami, szufladami i&nbsp;wysuwanymi półkami na buty</li>
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Szafy z&nbsp;lustrem połączone z&nbsp;otwartą częścią</li>
+        </ul>
+      </div>
+    </article>
+
+    <article id="lazienki" class="surface overflow-hidden grid lg:grid-cols-2 reveal">
+      <div class="photo !rounded-none !shadow-none aspect-[4/3] lg:aspect-auto lg:min-h-[460px] lg:order-2">
+        <img src="images/34.webp" alt="Szafka pod dwie umywalki z frezowanymi frontami" loading="lazy">
+      </div>
+      <div class="p-7 md:p-10 lg:p-12 flex flex-col justify-center lg:order-1">
+        <span class="icon-chip"><i data-lucide="bath" class="w-5 h-5"></i></span>
+        <h2 class="heading-lg mt-5">Łazienki i&nbsp;pralnie</h2>
+        <p class="lead mt-4">Meble do łazienki i&nbsp;pralni, które chowają pralkę, suszarkę i&nbsp;kosze, a&nbsp;przy tym pasują do płytek i&nbsp;armatury.</p>
+        <ul class="mt-6 space-y-2.5 text-ink-soft">
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Szafki pod umywalki nablatowe, także podwójne</li>
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Słupki łazienkowe z&nbsp;półkami</li>
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Zabudowa pralki i&nbsp;suszarki w&nbsp;słupku</li>
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Wysuwane kosze i&nbsp;szuflady z&nbsp;przegrodą na pranie</li>
+        </ul>
+      </div>
+    </article>
+
+    <article id="pokojowe" class="surface overflow-hidden grid lg:grid-cols-2 reveal">
+      <div class="photo !rounded-none !shadow-none aspect-[4/3] lg:aspect-auto lg:min-h-[460px]">
+        <img src="images/40.webp" alt="Podświetlana witryna i komoda pod skosem" loading="lazy">
+      </div>
+      <div class="p-7 md:p-10 lg:p-12 flex flex-col justify-center">
+        <span class="icon-chip"><i data-lucide="sofa" class="w-5 h-5"></i></span>
+        <h2 class="heading-lg mt-5">Meble pokojowe</h2>
+        <p class="lead mt-4">Meble do salonu, sypialni i&nbsp;pokoju dziecka, dobrane kolorem do reszty wnętrza.</p>
+        <ul class="mt-6 space-y-2.5 text-ink-soft">
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Szafki RTV, także z&nbsp;lamelami na ścianie</li>
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Witryny z&nbsp;podświetleniem LED</li>
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Komody, toaletki i&nbsp;regały</li>
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Zabudowy całych ścian z&nbsp;półkami i&nbsp;wnękami</li>
+        </ul>
+      </div>
+    </article>
+
+    <article id="biurowe" class="surface p-7 md:p-10 lg:p-12 grid lg:grid-cols-[1fr_1fr] gap-8 items-center reveal">
+      <div>
+        <span class="icon-chip"><i data-lucide="briefcase" class="w-5 h-5"></i></span>
+        <h2 class="heading-lg mt-5">Zabudowy biurowe</h2>
+        <p class="lead mt-4">Biuro w&nbsp;domu albo w&nbsp;firmie, urządzone pod sposób pracy i&nbsp;ilość dokumentów.</p>
+      </div>
+      <ul class="space-y-2.5 text-ink-soft">
+        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Biurka na wymiar, także we wnęce lub pod oknem</li>
+        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Regały i&nbsp;szafy na dokumenty</li>
+        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Zabudowy gabinetów i&nbsp;pokojów biurowych</li>
+        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-magenta-dark shrink-0 mt-0.5"></i>Szafki z&nbsp;zamkiem i&nbsp;miejsce na sprzęt</li>
+      </ul>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="relative bg-ink text-front on-dark overflow-hidden">
+  <div class="grain"></div>
+  <div class="accent-bar w-full" aria-hidden="true"></div>
+  <div class="relative max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-24 grid lg:grid-cols-[1.2fr_1fr] gap-10 items-center">
+    <div class="reveal">
+      <h2 class="heading-lg">Umów pomiar. <span class="text-magenta-light">Resztę zaplanujemy razem.</span></h2>
+      <p class="lead mt-5 max-w-2xl">Przyjedziemy, zmierzymy, doradzimy i&nbsp;podamy wycenę. Pracujemy w&nbsp;dni robocze od 7:00 do 17:00.</p>
+    </div>
+    <div class="flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end reveal">
+      <a href="tel:509543139" class="btn btn-magenta px-7 py-4 text-base"><i data-lucide="phone" class="w-5 h-5"></i> 509 543 139</a>
+      <a href="galeria.html" class="btn btn-outline px-7 py-4 text-base"><i data-lucide="images" class="w-5 h-5"></i> Zobacz realizacje</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink text-[#b8b8be] on-dark">
+  <div class="accent-bar w-full" aria-hidden="true"></div>
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-12 grid md:grid-cols-3 gap-8 text-[0.95rem]">
+    <div>
+      <img src="images/logo-light.webp" alt="KAM Meble" width="256" height="256" class="w-20 h-20" loading="lazy">
+      <p class="mt-3">KAM Meble Kamil Kucharski.<br>Meble na wymiar z&nbsp;województwa śląskiego.</p>
+    </div>
+    <div>
+      <p class="text-front font-semibold">Kontakt</p>
+      <p class="mt-2"><a href="tel:509543139" class="hover:text-magenta-light transition-colors">509 543 139</a><br><a href="mailto:kammeblekamilkucharski@gmail.com" class="hover:text-magenta-light transition-colors break-all">kammeblekamilkucharski@gmail.com</a><br>Łęg 27, 42-282 Kruszyna</p>
+    </div>
+    <div>
+      <p class="text-front font-semibold">Strona</p>
+      <p class="mt-2 flex flex-col gap-1">
+        <a href="uslugi.html" class="hover:text-magenta-light transition-colors w-fit">Usługi</a>
+        <a href="galeria.html" class="hover:text-magenta-light transition-colors w-fit">Galeria</a>
+        <a href="index.html#opinie" class="hover:text-magenta-light transition-colors w-fit">Opinie</a>
+        <a href="index.html#kontakt" class="hover:text-magenta-light transition-colors w-fit">Kontakt</a>
+      </p>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <p class="max-w-7xl mx-auto px-5 md:px-8 py-5 text-sm">© <span id="year">2026</span> KAM Meble Kamil Kucharski, Łęg</p>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia">
+  <button id="lb-close" class="lb-btn top-4 right-4" aria-label="Zamknij"><i data-lucide="x" class="w-5 h-5"></i></button>
+  <button id="lb-prev" class="lb-btn left-3 md:left-6 top-[calc(50%-1.5rem)]" aria-label="Poprzednie zdjęcie"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+  <button id="lb-next" class="lb-btn right-3 md:right-6 top-[calc(50%-1.5rem)]" aria-label="Następne zdjęcie"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+  <figure>
+    <img id="lb-img" src="" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+</div>
+
+<script src="main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
